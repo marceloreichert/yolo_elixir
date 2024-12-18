@@ -25,7 +25,7 @@ To run a YOLOv8 model, we typically need the neural network structure and the pr
 Ultralytics' YOLOv8 comes in several sizes: n (nano), s (small), m (medium), l (large), and x (extra-large). Larger models offer better performance in terms of classification accuracy and object detection but require more computational resources and memory.
 
 
-You can use the `python/yolov8_to_onnx.py` script found in the [GitHub repo](https://github.com/poeticoding/yolo_elixir).
+You can use the `python/yolo_to_onnx.py` script found in the [GitHub repo](https://github.com/poeticoding/yolo_elixir).
 
 First, install the dependencies (`requests` and `ultralytics`)
 ```bash
@@ -35,14 +35,16 @@ pip install -r python/requirements.txt
 Then, run the script by specifying the model size, such as `n`:
 
 ```bash
-python python/yolov8_to_onnx.py n
+python python/yolo_to_onnx.py yolov8n
+or
+python python/yolo_to_onnx.py yolo11n
 ```
 
 
 The script will download the `.pt` model and generate two files:
 
-* `models/yolov8n.onnx`: the YOLOv8n model with weights
-* `models/yolov8n_classes.json`: the list of object classes
+* `models/yolovXn.onnx`: the YOLOv8n model with weights
+* `models/yolovXn_classes.json`: the list of object classes
 
 
 ## Getting Started
